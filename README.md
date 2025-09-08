@@ -3,7 +3,7 @@ This example shows you how to connect to and use MongoDB from within your Tomcat
 
 Before running this example, follow the instructions from Project 4 to install and run MongoDB.
 
-## Mon setup
+## Mongo setup
 This section creates some requisite entities in MongoDB before you can run this project.
   * Start the Mongo command line shell:
     * `mongosh`
@@ -22,4 +22,13 @@ created above. It then uses the myNewDB database and retrieves the new Document 
 above and shows the title and body fields of that Document.
 
 Note that we also followed [the instructions from Baeldung](https://www.baeldung.com/java-mongodb)
-to setup the necessary Mongo Java Driver.
+to setup the necessary Mongo Java Driver. This means we added the dependency below to
+our pom.xml file.
+
+```
+<dependency>
+  <groupId>org.mongodb</groupId>
+  <artifactId>mongodb-driver-sync</artifactId>
+  <version>5.0.1</version>
+</dependency>
+```
